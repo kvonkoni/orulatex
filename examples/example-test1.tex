@@ -1,0 +1,227 @@
+%==============================================
+% ORULATEX TEST TEMPLATE
+%==============================================
+
+% INSTRUCTIONS: Run "build" at least 3 times before
+% distributing test to allow proper updating of crosslinks.
+
+%==============================================
+% BEGINNING OF PREAMBLE
+%==============================================
+\documentclass[letterpaper,coverpage,greyscale]{orulatest}
+%==============================================
+
+%==============================================
+% TEST AND AUTHOR INFORMATION (Update this)
+%==============================================
+\institution{My University}
+\school{Department of Mathematics}
+\testmonth{8} % Month the test is to be written (e.g. 1-12)
+\testyear{2017} % Four digit year (e.g. 2017)
+\course{Math 101} % Course code
+\test{Test 1} % Test name (e.g. Test 1)
+\timelimit{90} % Time limit in minutes (e.g. 60)
+\testauthor{Steve McQueen} % Test authour's name
+%\randseed{} % Seed for all random number generators (e.g. 624745)
+\formulasheet{equation-example-test1} % Equation sheet filename (comment out this line if none)
+%\coverpage{custom_coverpage} % Custom coverpage (comment out this line to use default)
+%==============================================
+
+%==============================================
+% USER SPECIFIED REDEFINITIONS (Optional)
+%==============================================
+%\newafterquestionspace{0.25in} % (default 0.25in) Change the spacing after a question (in units of length)
+%\newbetweenmultiplechoicespace{0.25in} % (default 0.25in) Change the spacing between multiple choice questions (in units of length)
+%\newbetweenproblemspace{0.25in} % (default \vfill) Change the spacing problems (in units of length)
+%==============================================
+
+%==============================================
+% BEGINNING OF DOCUMENT
+%==============================================
+\begin{document}
+%==============================================
+
+%==============================================
+% BEGIN QUESTIONS (See "eqexam"
+% documentation for details)
+% https://ctan.org/pkg/eqexam?lang=en
+% Manual also located in test folder.
+%==============================================
+
+%==============================================
+% MATHEMATICAL EXPRESSION HANDLING
+% Mathematical expressions are handles through the "fp" package.
+% https://ctan.org/pkg/fp?lang=en
+% Readme also located in test folder.
+% NOTE: When printing a variable \x, always put a space afterwards.
+% i.e.: '\x , \y , and \z are variables'
+%==============================================
+% \RandomNumber{x}{a}{b} % Create random decimal number \x in the range [a,b].
+% \RandomNInteger{x}{a}{b} % Create random integer number \x in the range [a,b].
+% \Eval{ <math expression> } % Print evaluated math expression at location.
+%==============================================
+
+%--------------------------- QUESTION ------------------------
+\begin{newproblem*}[1ea]
+\question{Multiple choice: Clearly mark your answer. Choose only one of the options. All multiple choice questions must show work to support the answer.}
+\begin{parts}
+	%--------------------------- PART ------------------------
+	\RandomInteger{x}{15}{30}
+	\RandomInteger{y}{4}{12}
+	\RandomInteger{z}{60}{90}
+	\newmultiplechoicepart[vA]{List of numbers for version A}{% [vA] here means that this part will only appear in version A of the test. You can create different questions for each version.
+	\begin{answers}{4}
+	\bChoices[random]
+		\Ans0 \Eval{x-1},\Eval{x},\Eval{x+1} \eAns
+		\Ans0 \Eval{y-4},\Eval{y},\Eval{y+8} \eAns
+		\Ans1 \Eval{z-6},\Eval{z},\Eval{z+3} \eAns
+		\eFreeze
+		\Ans0 None of them \eAns
+	\eChoices
+	\end{answers}
+	}%
+	\newmultiplechoicepart[vB]{List of numbers for version B}{%
+		\begin{answers}{4}
+			\bChoices[random]
+			\Ans0 \Eval{x-6},\Eval{x},\Eval{x+4} \eAns
+			\Ans1 \Eval{y-3},\Eval{y},\Eval{x+5} \eAns
+			\Ans0 \Eval{z-1},\Eval{z},\Eval{z+6} \eAns
+			\eFreeze
+			\Ans0 None of them \eAns
+			\eChoices
+		\end{answers}
+	}%
+	\newmultiplechoicepart[vC]{List of numbers for version C}{%
+		\begin{answers}{4}
+			\bChoices[random]
+			\Ans1 \Eval{x-1},\Eval{x},\Eval{x+3} \eAns
+			\Ans0 \Eval{y-3},\Eval{y},\Eval{x+1} \eAns
+			\Ans0 \Eval{z-5},\Eval{z},\Eval{z+9} \eAns
+			\eFreeze
+			\Ans0 None of them \eAns
+			\eChoices
+		\end{answers}
+	}%
+	\newmultiplechoicepart[vD]{List of numbers for version D}{%
+		\begin{answers}{4}
+			\bChoices[random]
+			\Ans0 \Eval{x-3},\Eval{x},\Eval{x+3} \eAns
+			\Ans0 \Eval{y-3},\Eval{y},\Eval{x+9} \eAns
+			\Ans1 \Eval{z-5},\Eval{z},\Eval{z+2} \eAns
+			\eFreeze
+			\Ans0 None of them \eAns
+			\eChoices
+		\end{answers}
+	}%
+	%---------------------------------------------------------
+	%--------------------------- PART ------------------------
+	\RandomInteger{x}{1}{3}
+	\RandomInteger{y}{5}{8}
+	\newmultiplechoicepart{Convert the fraction $\x\frac{\y}{9}$ to an exactly equivalent decimal number.}{%
+	\begin{answers}{4}
+	\bChoices[random]
+		\Ans1 $\x .\bar{\y }$ \eAns
+		\Ans0 $\x .\y $ \eAns
+		\Ans0 $\Eval{round((x*9+y)/9,3)}$ \eAns
+		\Ans0 $\Eval{round((x*9+y)/9,9)}$ \eAns
+	\eChoices
+	\end{answers}
+	}%
+	%---------------------------------------------------------
+\end{parts}
+\end{newproblem*}
+%-------------------------------------------------------------
+
+%--------------------------- QUESTION ------------------------
+\begin{newproblem*}[2]
+\RandomNumber{x}{40}{160}
+\question{%
+Christopher Columbus travelled the following distances on his \vA{first}\vB{second}\vC{third}\vD{fourth} voyages:
+\begin{table}[h]
+\begin{tabular}{ l | r }
+Day 1 & $\Eval{round((x+17.9),1)}$ \vA{km}\vB{mi}\vC{nmi}\vD{cubits} \\
+Day 2 & $\Eval{round((x-5.2),1)}$ \vA{km}\vB{mi}\vC{nmi}\vD{cubits} \\
+Day 3 & $\Eval{round((x+10.4),1)}$ \vA{km}\vB{mi}\vC{nmi}\vD{cubits} \\
+Day 4 & $\Eval{round((x-8.9),1)}$ \vA{km}\vB{mi}\vC{nmi}\vD{cubits} \\
+Day 5 & $\Eval{round((x-1.5),1)}$ \vA{km}\vB{mi}\vC{nmi}\vD{cubits} \\
+Day 6 & $\Eval{round((x+5.2),1)}$ \vA{km}\vB{mi}\vC{nmi}\vD{cubits} \\
+Day 7 & $\Eval{round((x-17.9),1)}$ \vA{km}\vB{mi}\vC{nmi}\vD{cubits}
+\end{tabular}
+\end{table}
+}%
+\begin{parts}
+	%--------------------------- PART ------------------------
+	\newpart{The mean is \fillin{2in}{$\boxed{\Eval{round(x,1)}}$ \vA{km}\vB{mi}\vC{nmi}\vD{cubits}}.}
+	\begin{solution}[1.0in]
+		\begin{eqnarray*}
+		\text{Mean} & = & \frac{\Eval{round((x+17.9),1)}+\Eval{round((x-5.2),1)}+\Eval{round((x+10.4),1)}+\Eval{round((x-8.9),1)}+\Eval{round((x-1.5),1)}+\Eval{round((x+5.2),1)}+\Eval{round((x-17.9),1)}}{7} \\
+		 & = & \frac{\Eval{round((7*x),1)}}{7} = \textbf{\Eval{round(x,1)}}
+		\end{eqnarray*}
+	\end{solution}
+	%---------------------------------------------------------
+	%--------------------------- PART ------------------------
+	\newpart{The median is \fillin{2in}{$\boxed{\Eval{round((x-1.5),1)}}$ \vA{km}\vB{mi}\vC{nmi}\vD{cubits}}.}
+	\begin{solution}[1.0in]
+		Smallest value $\rightarrow$ Largest value \\
+		\Eval{round((x-17.9),1)}, \Eval{round((x-8.9),1)}, \Eval{round((x-5.2),1)}, \textbf{\Eval{round((x-1.5),1)}}, \Eval{round((x+5.2),1)}, \Eval{round((x+10.4),1)}, \Eval{round((x+17.9),1)}
+	\end{solution}
+	%---------------------------------------------------------
+\end{parts}
+\end{newproblem*}
+%-------------------------------------------------------------
+
+%--------------------------- QUESTION ------------------------
+\begin{newproblem}[2]
+\RandomInteger{x}{28}{98}
+\RandomInteger{y}{3}{15}
+\question{The town of Utopia's tax surplus is \$$\Eval{round((1-5*y/100)*(x+0.95),2)}$ and is $\Eval{5*y}$\% less than last year, what was the surplus last year?}%
+\begin{solution}[3.0in]
+	\begin{eqnarray*}
+	\text{Full price} & = & \Eval{round((1-5*y/100)*(x+0.95),2)} \div (1-\Eval{5*y/100}) \\
+	 & = & \Eval{round((1-5*y/100)*(x+0.95),2)} \div \Eval{1-5*y/100} \\
+	 & = & \boxed{\$\Eval{(x+0.95)}}
+	\end{eqnarray*}
+\end{solution}
+\end{newproblem}
+%-------------------------------------------------------------
+
+%--------------------------- QUESTION ------------------------
+\RandomInteger{x}{46}{58}
+\RandomInteger{y}{5}{90}
+\RandomSILength{l}
+\begin{newproblem}[3]
+	\question{Using either the law of sines or the law of cosines, determine the angles $\angle Y$, $\angle Z$, and the side $x$.}
+	\begin{center}
+		\begin{tikzpicture}[thick]
+		\coordinate (A) at ({-4/tan(\x)},0.0) ;
+		\coordinate (B) at (0.0,4.0) ;
+		\coordinate (C) at ({4/tan(\x)},0.0) ;
+		\draw (A) -- (B);
+		%\draw [-|] ({-4/tan(\x)},0.0) -- ({-2/tan(\x)},2) ;
+		\draw (B) -- (C);
+		%\draw [-|] ({4/tan(\x)},0.0) -- ({2/tan(\x)},2) ;
+		\draw (A) -- (C);
+		\node at ({-4/tan(\x)-0.5*cos(\x/2)},{-0.5*sin(\x/2)}) {$X$} ;
+		\node at ({-4/tan(\x)+1.0*cos(\x/2)},{1.0*sin(\x/2)}) {$\x^\circ$} ;
+		\node at ({-2/tan(\x)-0.5},{2+0.5}) {$\y$ \l} ;
+		\node at ({4/tan(\x)+0.5*cos(\x/2)},{-0.5*sin(\x/2)}) {$Z$} ;
+		\node at ({2/tan(\x)+0.5},{2+0.5}) {$x$} ;
+		\node at (0.0,4.5) {$Y$} ;
+		\node at (0.0,-0.5) {$\Eval{round(0.95*2*y*cos(pi*x/180),0)}$ \l} ;
+		\end{tikzpicture}
+	\end{center}
+	\begin{solution}[4.0in]
+		Enter the solution here.
+	\end{solution}
+\end{newproblem}
+%-------------------------------------------------------------
+
+%==============================================
+% END QUESTIONS
+%==============================================
+
+%==============================================
+% END OF DOCUMENT
+%==============================================
+\end{document}
+%==============================================

@@ -1,0 +1,130 @@
+%==============================================
+% ORULATEX ASSIGNMENT TEMPLATE
+%==============================================
+
+%==============================================
+% BEGINNING OF PREAMBLE
+%==============================================
+\documentclass[12pt,letterpaper]{orulawork}
+%==============================================
+
+%==============================================
+% ASSIGNMENT AND TEACHER INFORMATION (Update this)
+%==============================================
+\teacher{Alfred Nobel}
+\assignment{Homework}
+\coursecode{MATH 200}
+\coursename{Advanced Math}
+\topics{Solving Systems of Equations, Determinants}
+\duedate{June 12, 1901}
+%==============================================
+
+\newif\ifanswerkey
+\newcommand{\answer}[1]{%
+	\ifanswerkey%
+		{\color{red}[Ans: #1]}%
+	\fi%
+}
+%\answerkeytrue
+
+%==============================================
+% BEGINNING OF DOCUMENT
+%==============================================
+\begin{document}
+%==============================================
+
+\instructions{Complete all of the following exercises. These are extra practice questions and are not to be handed-in.}
+
+\begin{question}
+Solve the following systems of two linear equations using any method.
+\begin{exercises}
+	\item%
+	\begin{eqnarray*}
+		4x + 3y & = & 27 \\
+		2x - 5y & = & -19 \\
+	\end{eqnarray*} \answer{$x=3$ and $y=5$}
+	\item%
+	\begin{eqnarray*}
+		2x - 3y + 14 & = & 0 \\
+		3x + 3y & = & 44 \\
+	\end{eqnarray*} \answer{$x=6$ and $y=\frac{26}{3}$}
+\end{exercises}
+\end{question}
+
+\begin{question}
+	A farmer bought 100 ha of land, part at \$1,850 per hectare and part for \$2,250 per hectare, paying for the whole \$211,000. How much land was there in each part? \answer{$x=35$ and $y=65$ or $x=65$ and $y=35$}
+\end{question}
+
+\begin{question}
+	When writing Kirchhoff’s law (Eq. A68) for a certain three-loop network, we get the set of equations
+	\begin{eqnarray*}
+		3I_1 + 2I_2 - 4I_3 & = & \phantom{-}4 \\
+		I_1 - 3I_2 + 2I_3 & = & -5 \\
+		2I_1 + I_2 - I_3 & = & \phantom{-}3 \\
+	\end{eqnarray*}
+where $I_1$, $I_2$, and $I_3$ are the loop currents in amperes. Solve for these currents. \answer{$I_1=\frac{2}{3}$, $I_2=\frac{7}{3}$ and $I_3=\frac{2}{3}$}
+\end{question}
+
+\pagebreak
+
+\begin{question}
+	Solve the following systems of three linear equations using any method.
+	\begin{exercises}
+		\item%
+		\begin{eqnarray*}
+			x + y & = & 35 \\
+			x + z & = & 40 \\
+			y + z & = & 45 \\
+		\end{eqnarray*} \answer{$x=15$, $y=20$ and $z=25$}
+		\item%
+		\begin{eqnarray*}
+			p + 3q - r & = & 10 \\
+			5p - 2q + 2r & = & 6 \\
+			3p + 2q + r & = & 13 \\
+		\end{eqnarray*} \answer{$p=2$, $q=3$ and $r=1$}
+	\end{exercises}
+\end{question}
+
+\begin{question}
+	Find the value of the following determinant.
+	\begin{equation*}
+		\begin{vmatrix}
+			3 &  \phantom{-}2 \\
+			1 & -4 \\
+		\end{vmatrix}
+	\end{equation*} \answer{$-14$}
+\end{question}
+
+\begin{question}
+	Solve the following pair of equations by determinants.
+	\begin{eqnarray*}
+		2x + y & = & 11 \\
+		3x - y & = & 4 \\
+	\end{eqnarray*} \answer{$\Delta=-5$, $x=3$, and $y=5$}
+\end{question}
+
+\begin{question}
+	Find the value of the following determinant.
+	\begin{equation*}
+		\begin{vmatrix}
+			1 & 0 & 2 \\
+			3 & 1 & 0 \\
+			1 & 2 & 1 \\
+		\end{vmatrix}
+	\end{equation*} \answer{$11$}
+\end{question}
+
+\begin{question}
+	Solve the following set of equations by determinants.
+	\begin{eqnarray*}
+		x - 2y +2z & = & 5 \\
+		5x + 3y + 6z & = & 57 \\
+		x + 2y + 2z & = & 21 \\
+	\end{eqnarray*} \answer{$\Delta=16$, $x=3$, $y=45$, and $z=5$}
+\end{question}
+
+%==============================================
+% END OF DOCUMENT
+%==============================================
+\end{document}
+%==============================================

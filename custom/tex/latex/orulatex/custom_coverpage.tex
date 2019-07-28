@@ -1,0 +1,82 @@
+%==============================================
+% CUSTOM ORULATEST COVERPAGE FOR YOUR INSITUTION
+%==============================================
+
+% INSTRUCTIONS: Place this file in the OrulaTex Files\Custom folder.
+
+%==============================================
+
+% Defining a custom coverpage for your institution.
+\makeatletter
+\renewcommand{\eqexcoverpagedesign}
+{%
+    \begingroup
+    \parindent0pt
+    \thispagestyle{empty}
+	\optionalpagematter
+	\addtolength\textwidth{\oddsidemargin}
+
+	\hspace{-0.4in} \includegraphics[height=0.4575in]{\HeaderImage}
+
+	\begin{center}
+	\large\underline{\textsc{\Institution}} \\
+	\vspace{6pt}
+	\large\underline{\textsc{\School}}
+	\end{center}
+
+	\vspace{16pt}
+
+	\begin{minipage}[t]{0.35\linewidth}
+	\normalsize Full Name (last name first): \\
+	\vspace{16pt}
+
+	Signature: \\
+	\vspace{12pt}
+
+	Student Number:
+	\end{minipage}
+	\begin{minipage}[t]{0.6\linewidth}
+	\eq@ExamName , \eq@ExamGiven \\
+	\phantom{x} \hspace{0.55in}(LAST)\hspace{1.5in}(FIRST)
+	\vspace{14pt}
+
+	\rule[-2pt]{3.9in}{0.4pt}
+	\vspace{14pt}
+
+	\eq@SID
+	\end{minipage} \\
+	
+	\vspace{6pt}
+
+	\begin{center}
+	\textbf{\Course \ - \Test \  (Version \TestVersion)}
+	\end{center}
+	\textbf{\MonthName{TestMonth}, \TestYear} \\
+
+	Instructions:
+	\begin{enumerate}[topsep=6pt,itemsep=6pt,label=\Alph*.]
+	\ifdefined\FormulaSheet
+		\item A formula sheet is attached. No notes or other papers are allowed.
+	\else
+		\item No notes or other papers are allowed.
+	\fi
+	\item No talking during the test.
+	\item The only materials you should have on your desk are those your instructor allows.
+	\item You must show all work to support your answers.
+	\item No part marks will be given for multiple choice answers.
+	\item You can only leave your desk with the permission of the instructor.
+	\item This exam consists of \nQuesInExam[exam1] questions and contains \nPagesOnExam \ pages (including any formula sheets). Please check to be sure you have all pages.
+		\begin{itemize}
+		\item All calculations should be done on the exam paper.
+		\item Show complete work to get full marks.
+		\item Record all of your answers on the exam paper.
+		\end{itemize}
+	\end{enumerate}
+
+	Time limit on this test is \numberstringnum{\TimeLimit} (\TimeLimit) minutes. \\
+
+	Total marks: \textbf{\underline{\boldmath\totalForPart{exam1} marks}}
+	\sumryAnnots    
+    \endgroup
+}
+\makeatletter

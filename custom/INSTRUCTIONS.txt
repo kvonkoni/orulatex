@@ -1,0 +1,3 @@
+This folder has been added to the MikTeX root directories.
+
+Custom packages, classes, and tex files should be placed in the "/tex/latex/orulatex/" folder.

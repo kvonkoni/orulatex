@@ -1,0 +1,11 @@
+Logo
+radial : 69a29fff
+center : caffffff
+
+Welcome image
+top : 00bce010
+bottom : 005e537e
+
+Header left
+left : 005e538e
+right : 00bce000
